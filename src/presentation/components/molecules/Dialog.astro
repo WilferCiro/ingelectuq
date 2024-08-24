@@ -5,12 +5,15 @@
 <dialog>
   <button class="close" onclick="closeModal">X</button>
   <div class="body">
-    <iframe width="700" height="415" src="https://www.youtube.com/embed/MFeoztdamK0">
+    <iframe height="415" src="https://www.youtube.com/embed/MFeoztdamK0">
     </iframe>
   </div>
 </dialog>
 
 <style>
+  iframe {
+    width: 700px;
+  }
   dialog[open] {
     scale: 1;
     transition: scale 0.3s ease;
@@ -47,6 +50,11 @@
   }
   .body {
     margin-top: 30px;
+  }
+  @media (max-width: 700px) {
+    iframe {
+      width: 100%;
+    }
   }
 </style>
 
