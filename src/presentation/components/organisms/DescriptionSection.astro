@@ -1,0 +1,106 @@
+---
+
+---
+
+
+<section class="highlighted-visit">
+  <div>
+    <img src="/images/visit.jpg" />
+  </div>
+  <div class="highlighted-text">
+    <h2>Visita de pares</h2>
+    <p>El próximo <strong>5 y 6 de septiembre</strong> contaremos con la visita por parte de pares académicos del Sistema <span class="highlight">MERCOSUR</span> para la acreditación internacional.</p>
+    <p>Además, <span class="highlight">tendremos</span> visita para reacreditar nuestro programa por parte del <strong>CNA</strong></p>
+
+    <div class="date-show">
+      <label id="days">6</label><sub>D</sub>
+      <label id="hours">23</label><sub>H</sub>
+      <label id="minutes">2</label><sub>M</sub>
+      <label id="seconds">2</label><sub>S</sub>
+    </div>
+  </div>
+</section>
+
+
+<style>
+  section {
+    margin: auto;
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 40px;
+    padding: 0px 20%;
+    background-color: var(--primary-color);
+    color: white;
+  }
+  h3 {
+    color: white;
+  }
+  p {
+    margin: 0px;
+  }
+  .date-show {
+    font-weight: bold;
+    padding: 10px 40px;
+    word-spacing: 10px;
+    font-size: 25px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  .date-show sub {
+    font-weight: 400;
+  }
+
+  .highlighted-visit h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .highlighted-text {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .highlight {
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  img {
+    width: 100%;
+  }
+</style>
+
+<script>
+  const daysText = document.getElementById("days");
+  const hoursText = document.getElementById("hours");
+  const minutesText = document.getElementById("minutes");
+  const secondsText = document.getElementById("seconds");
+  function updateDate() {
+    setTimeout(updateDate, 1000);
+    const now = new Date();
+    const targetDate = new Date('2024-09-05T16:00:00');
+    const difference = targetDate.getTime() - now.getTime();
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+    if(daysText) {
+      daysText.innerHTML = `${days}`;
+    }
+    if(hoursText) {
+      hoursText.innerHTML = `${hours}`;
+    }
+    if(minutesText) {
+      minutesText.innerHTML = `${minutes}`;
+    }
+    if(secondsText) {
+      secondsText.innerHTML = `${seconds}`;
+    }
+  }
+
+  updateDate();
+</script>

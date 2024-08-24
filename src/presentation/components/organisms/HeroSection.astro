@@ -1,0 +1,88 @@
+---
+import IconPlay from "../icons/IconPlay.astro";
+import Button from "../atoms/Button.astro";
+import ButtonLink from "../atoms/ButtonLink.astro";
+import Dialog from "../molecules/Dialog.astro";
+
+---
+
+<section>
+  <div class="container">
+    <div>
+      <h3>Ingeniería electrónica</h3>
+      <h1><span>¡Estamos Listos!</span> Acreditación Internacional y Reacreditación</h1>
+      <ButtonLink text="¡Conoce más!" />
+    </div>
+    <div class="image-container">
+      <div class="overlay">
+        <button id="button-modal"><IconPlay /></button>
+      </div>
+      <img src="/images/hero-image.png" />
+    </div>
+  </div>
+
+  <Dialog />
+</section>
+
+<style>
+  section {
+    background: url("/images/hero-bg.jpg");
+    background-size: 100vw 100vh;
+  }
+  .container {		
+    width: 60%;
+    margin: auto;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+  }
+  .container img {
+    width: 400px;
+  }
+  h1 {
+    font-weight: 400;
+    margin-top: 5px;
+  }
+  h1 span {
+    color: var(--primary-color);
+  }
+  h3 {
+    font-weight: 300;
+    margin-bottom: 0px;
+  }
+
+  .image-container {
+    position: relative;
+  }
+  .image-container img {
+    width: 490px;
+  }
+  .overlay {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+  }
+  .overlay:hover button {
+    display: block;
+    transform: scale(1.1);
+  }
+  .overlay button {
+    width: 80px;
+    height: 80px;
+    background: rgba(10, 10, 10, 0.5);
+    border: none;
+    padding: 5px;
+    color: white;
+    border-radius: 100%;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+</style>
+
+<script>
+  const dialog = document.querySelector("dialog");
+  document.getElementById("button-modal")?.addEventListener('click', () => {
+    dialog?.showModal();
+  })
+</script>

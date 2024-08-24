@@ -14,6 +14,7 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 		<title>{title}</title>
 	</head>
 	<body>
@@ -21,6 +22,9 @@ const { title } = Astro.props;
 	</body>
 </html>
 <style is:global>
+	* {
+		box-sizing: border-box;
+	}
 	:root {
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
@@ -31,20 +35,17 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+		--primary-color: #226db6;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: white;
+		color: #353a40;
+		margin: 0px;
+		padding: 0px;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	body {
+		margin: 0px;
+		padding: 0px;
 	}
 </style>

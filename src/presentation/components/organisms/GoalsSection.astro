@@ -1,0 +1,130 @@
+---
+import ButtonLink from "../atoms/ButtonLink.astro";
+import Title from "../atoms/Title.astro";
+import IconMegaphone from "../icons/IconMegaphone.astro";
+---
+
+<section class="accreditation-benefits">
+  <Title title="Ventajas de la Acreditación" />
+  <div class="row">
+    <h3>Arcusur</h3>
+    <div class="items-list">
+      <div class="item-menu">
+        <header>
+          <div class="icon">
+            <IconMegaphone />
+          </div>
+          <h3>Reconocimiento</h3>
+        </header>
+        <p>Reconocimiento internacional que garantiza la calidad educativa</p>
+      </div>
+      <div class="item-menu">
+        <header>
+          <div class="icon">
+            <IconMegaphone />
+          </div>
+          <h3>Reconocimiento</h3>
+        </header>
+        <p>Reconocimiento internacional que garantiza la calidad educativa</p>
+      </div>
+      <div class="item-menu">
+        <header>
+          <div class="icon">
+            <IconMegaphone />
+          </div>
+          <h3>Reconocimiento</h3>
+        </header>
+        <p>Reconocimiento internacional que garantiza la calidad educativa</p>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <h3>CNA</h3>
+    <div class="items-list">
+      <div class="item-menu">
+        <header>
+          <div class="icon">
+            <IconMegaphone />
+          </div>
+          <h3>Reconocimiento</h3>
+        </header>
+        <p>Reconocimiento internacional que garantiza la calidad educativa</p>
+      </div>
+      <div class="item-menu">
+        <header>
+          <div class="icon">
+            <IconMegaphone />
+          </div>
+          <h3>Reconocimiento</h3>
+        </header>
+        <p>Reconocimiento internacional que garantiza la calidad educativa</p>
+      </div>
+      <div class="item-menu">
+        <header>
+          <div class="icon">
+            <IconMegaphone />
+          </div>
+          <h3>Reconocimiento</h3>
+        </header>
+        <p>Reconocimiento internacional que garantiza la calidad educativa</p>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <h3>¿Tienes dudas?</h3>
+    <ButtonLink text="Conoce más" />
+  </footer>
+</section>
+
+<style>
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0px;
+  }
+
+  section {
+    width: 70%;
+    margin: auto;
+  }
+
+  section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .items-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  .item-menu {
+    text-align: center;
+  }
+  .item-menu header {
+
+  }
+  .icon {
+    color: var(--primary-color);
+    padding: 10px;
+    border-radius: 100%;
+    background: rgba(10, 10, 10, 0.05);
+    width: 70px;
+    height: 70px;
+    margin: auto;
+  }
+  h3 {
+    margin: 0px;
+  }
+  p {
+    opacity: 0.8;
+    margin: 0px;
+  }
+  .row {
+    margin-bottom: 100px;
+  }
+
+</style>

@@ -1,0 +1,59 @@
+---
+
+---
+
+<dialog>
+  <button class="close" onclick="closeModal">X</button>
+  <div class="body">
+    <iframe width="700" height="415" src="https://www.youtube.com/embed/MFeoztdamK0">
+    </iframe>
+  </div>
+</dialog>
+
+<style>
+  dialog[open] {
+    scale: 1;
+    transition: scale 0.3s ease;
+
+    @starting-style {
+      scale: 0;
+    }
+  }
+
+  dialog {
+    transition: scale .3s ease, display .3s ease allow-discrete;
+    scale: 0;
+    background-color: #1b1e2d;
+    border: none;
+    border-radius: 10px;
+    z-index: 2;
+  }
+  dialog::backdrop {
+    background-color: rgba(10, 10, 10, 0.5);
+    backdrop-filter: blur(10px);
+  }
+  .close {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+  }
+  .close:hover {
+    opacity: 0.6;
+  }
+  .body {
+    margin-top: 30px;
+  }
+</style>
+
+<script>
+  const dialog = document.querySelector("dialog");
+  const closeButton = document.querySelector("dialog button");
+  closeButton?.addEventListener("click", () => {
+    dialog?.close();
+  });
+</script>
