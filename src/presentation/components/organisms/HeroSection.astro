@@ -1,6 +1,5 @@
 ---
 import IconPlay from "../icons/IconPlay.astro";
-import Button from "../atoms/Button.astro";
 import ButtonLink from "../atoms/ButtonLink.astro";
 import Dialog from "../molecules/Dialog.astro";
 
@@ -11,7 +10,9 @@ import Dialog from "../molecules/Dialog.astro";
     <div>
       <h3>Ingeniería electrónica</h3>
       <h1><span>¡Estamos Listos!</span> Acreditación Internacional y Reacreditación</h1>
-      <ButtonLink text="¡Conoce más!" href="#faq" />
+      <footer>
+        <ButtonLink text="¡Conoce más!" href="#faq" />
+      </footer>
     </div>
     <div class="image-container">
       <div class="overlay">
@@ -77,6 +78,28 @@ import Dialog from "../molecules/Dialog.astro";
     border-radius: 100%;
     transition: all 0.3s;
     cursor: pointer;
+  }
+  @media (max-width: 600px) {
+    .container {
+      flex-direction: column-reverse;
+      height: 100vh;
+      width: 95%;
+      text-align: center;
+      justify-content: start;
+    }
+    .container img {
+      width: 100%;
+    }
+    .image-container {
+      width: 80%;
+    }
+    footer {
+      margin: auto;
+      width: fit-content;
+    }
+    h1 {
+      font-size: 28px;
+    }
   }
 
 </style>
