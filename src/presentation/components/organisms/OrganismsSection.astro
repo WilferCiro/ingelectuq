@@ -2,79 +2,58 @@
 
 ---
 
-<section>
-  <h2>ARCU-SUR</h2>
-  <p>Sistema Regional de Acreditación para la Educación Superior en el Mercosur y Estados Asociados</p>
-  <div class="item">
-    <div>
-      <div>
-        <h4>¿En qué me beneficia como estudiante?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+<div class="container">
+  <section class="accreditation">
+      <div class="accreditation-card">
+          <h2>ARCUSUR</h2>
+          <p>La acreditación ARCUSUR valida la calidad educativa en América Latina, garantizando altos estándares y facilita la movilidad académica entre países.</p>
+          <a href="https://www.arcusur.org" target="_blank" class="link-card">
+            Visita la página oficial
+          </a>
       </div>
-      <div>
-        <h4>¿En qué me beneficia como estudiante?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      <div class="accreditation-card">
+          <h2>CNA</h2>
+          <p>La acreditación CNA certifica la calidad educativa en Colombia, mejorando la reputación institucional y promoviendo el acceso a recursos y confianza.</p>
+          <a href="https://www.cna.gov.co" target="_blank" class="link-card">
+            Visita la página oficial
+          </a>
       </div>
-      <div>
-        <h4>¿En qué me beneficia como estudiante?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-      </div>
-    </div>
-    <div>
-      <img src="/images/arcusur.jpg" />
-    </div>
-  </div>
-  <h2>CNA</h2>
-  <p>Consejo Nacional de Acreditación</p>
-  <div class="item">
-    <div>
-      <img src="/images/arcusur.jpg" />
-    </div>
-    <div>
-      <div>
-        <h4>¿En qué me beneficia como estudiante?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-      </div>
-      <div>
-        <h4>¿En qué me beneficia como estudiante?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-      </div>
-      <div>
-        <h4>¿En qué me beneficia como estudiante?</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
+</div>
 
 <style>
-  section {
-    width: 60%;
-    margin: auto;
-    min-height: 100vh;
-  }
-  .item {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  p {
-    opacity: 0.7;
-    font-size: var(--text-size);
-  }
-  h4 {
-    font-size: var(--title4-size);
-    margin: 0px 4px;
-  }
-  img {
-    width: 300px;
+  .container {
+    width: 80%;
+    margin: 100px auto;
+    overflow: hidden;
   }
 
-  @media (max-width: 600px) {
-    section {
-      width: 90%;
-    }
-    .item {
-      display: block;
-    }
+  .accreditation {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 50px;
+  }
+
+  .accreditation-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 45%;
+      margin: 20px 0;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+  }
+
+  .accreditation-card h2 {
+      color: #226db6;
+      margin-bottom: 10px;
+  }
+
+  .accreditation-card p {
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
   }
 </style>
