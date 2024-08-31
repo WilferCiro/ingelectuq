@@ -1,4 +1,7 @@
 ---
+import ButtonExternalLink from "../atoms/ButtonExternalLink.astro";
+import IconExternalLink from "../icons/IconExternalLink.astro";
+
 
 ---
 
@@ -7,16 +10,12 @@
       <div class="accreditation-card">
           <h2>ARCUSUR</h2>
           <p>La acreditación ARCUSUR valida la calidad educativa en América Latina, garantizando altos estándares y facilita la movilidad académica entre países.</p>
-          <a href="https://www.arcusur.org" target="_blank" class="link-card">
-            Visita la página oficial
-          </a>
+          <ButtonExternalLink href="https://www.arcusur.org" text="Visita la página oficial" />
       </div>
       <div class="accreditation-card">
           <h2>CNA</h2>
           <p>La acreditación CNA certifica la calidad educativa en Colombia, mejorando la reputación institucional y promoviendo el acceso a recursos y confianza.</p>
-          <a href="https://www.cna.gov.co" target="_blank" class="link-card">
-            Visita la página oficial
-          </a>
+          <ButtonExternalLink href="https://www.cna.gov.co" text="Visita la página oficial" />
       </div>
   </section>
 </div>
@@ -57,7 +56,6 @@
   }
 
   @media (max-width: 600px) {
-
     .accreditation {
       flex-direction: column;
       gap: 0px;

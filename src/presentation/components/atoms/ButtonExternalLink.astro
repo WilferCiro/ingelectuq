@@ -1,0 +1,29 @@
+---
+import IconExternalLink from "../icons/IconExternalLink.astro";
+
+const { text, href } = Astro.props;
+---
+
+<a class="button" href={href} target="_blank">
+  {text} <IconExternalLink />
+</a>
+
+<style>
+  .button {
+    border: none;
+    padding: 10px 40px;
+    border-radius: 50px;
+    display: block;
+    width: fit-content;
+    transition: ease-out all .1s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .button:hover {
+    cursor: pointer;
+    gap: 10px;
+    opacity: 0.8;
+  }
+</style>

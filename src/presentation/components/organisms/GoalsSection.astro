@@ -13,7 +13,9 @@ import IconCrown from "../icons/IconCrown.astro";
 <section class="accreditation-benefits">
   <Title title="Ventajas de la Acreditación" />
   <div class="row">
-    <h3>Arcusur</h3>
+    <div class="row-title">
+      <h3>Arcusur</h3>
+    </div>
     <div class="items-list">
       <div class="item-menu">
         <header>
@@ -45,7 +47,9 @@ import IconCrown from "../icons/IconCrown.astro";
     </div>
   </div>
   <div class="row">
-    <h3>CNA</h3>
+    <div class="row-title">
+      <h3>CNA</h3>
+    </div>
     <div class="items-list">
       <div class="item-menu">
         <header>
@@ -95,7 +99,24 @@ import IconCrown from "../icons/IconCrown.astro";
     width: 70%;
     margin: auto;
   }
-
+  .row {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    margin-bottom: 100px;
+    align-items: center;
+    border: 1px solid rgba(10, 10, 10, 0.2);
+    border-radius: 20px;
+    padding: 20px 20px;
+  }
+  .row-title {
+    background-color: var(--primary-color);
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
   .items-list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -124,9 +145,6 @@ import IconCrown from "../icons/IconCrown.astro";
     opacity: 0.8;
     margin: 0px;
   }
-  .row {
-    margin-bottom: 100px;
-  }
 
   @media (max-width: 600px) {
     section {
@@ -134,6 +152,13 @@ import IconCrown from "../icons/IconCrown.astro";
     }
     .items-list {
       display: block;
+    }
+    .row {
+      display: block;
+      border: none;
+    }
+    .row-title {
+      height: 100px;
     }
   }
 
